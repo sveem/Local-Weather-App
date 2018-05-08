@@ -5,12 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <script type='text/javascript' src='bower_components/knockout/dist/knockout.js'></script>
   <script type='text/javascript' src='bower_components/jquery/dist/jquery.js'></script>
   <script type='text/javascript' src='viewModel.js'></script>
 </head>
-<body >
-   <h3 data-bind="text: city()"></h3>
-   <h3 data-bind="text: country()"></h3>
+<body>
+ <div class="flex-container">
+   <div class="city">
+     <p data-bind="text: city()"></p>
+   </div>
+   <div class="description">
+     <p data-bind="text: description()"></p>
+   </div>
+   <div class="wind">
+   <p data-bind="text: wind()"></p>
+   </div>
+ </div>
 </body>
 </html>

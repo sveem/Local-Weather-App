@@ -1,0 +1,40 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.city {
+  border-radius: 10px;
+  border: 1px solid #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 80px;
+  text-align: center;
+  font-size: 18px;
+  font-family: arial;
+}
+
+.description {
+  border-radius: 10px;
+  border: 1px solid #73AD21;
+  padding: 20px;
+  width: 160px;
+  height: 80px;
+  text-align: center;
+  font-size: 18px;
+  font-family: arial;
+  margin-left: 5px;
+}
+
+.wind {
+  border-radius: 10px;
+  border: 1px solid #73AD21;
+  padding: 20px;
+  width: 160px;
+  height: 80px;
+  text-align: center;
+  font-size: 18px;
+  font-family: arial;
+  margin-left: 5px;
+}
