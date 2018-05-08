@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script type='text/javascript' src='bower_components/knockout/dist/knockout.js'></script>
-</head>
-<body>
-  <div class="title">
-    <span data-bind="text: title"></span>
-  </div>
+  <script type='text/javascript' src='bower_components/jquery/dist/jquery.js'></script>
   <script type='text/javascript' src='viewModel.js'></script>
+</head>
+<body >
+   <h3 data-bind="text: city()"></h3>
+   <h3 data-bind="text: country()"></h3>
 </body>
 </html>
