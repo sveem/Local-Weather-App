@@ -1,7 +1,16 @@
+body {
+  background-image: url("assets/sunny-day.jpg"); 
+  background-repeat: no-repeat, repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-size: cover;
+}
+
 .flex-container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .city {
@@ -37,4 +46,11 @@
   font-size: 18px;
   font-family: arial;
   margin-left: 5px;
+}
+
+.temperature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
 }

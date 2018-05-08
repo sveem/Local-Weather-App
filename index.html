@@ -12,6 +12,9 @@
   <script type='text/javascript' src='viewModel.js'></script>
 </head>
 <body>
+  <div class="temperature">
+    <span data-bind="text: temperature()"></span>
+  </div>
  <div class="flex-container">
    <div class="city">
      <p data-bind="text: city()"></p>
@@ -20,7 +23,7 @@
      <p data-bind="text: description()"></p>
    </div>
    <div class="wind">
-   <p data-bind="text: wind()"></p>
+     <p data-bind="text: wind()"></p>
    </div>
  </div>
 </body>
