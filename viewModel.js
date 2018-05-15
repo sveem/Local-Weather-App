@@ -11,8 +11,26 @@ $(function() {
     country: ko.observable(),
     description: ko.observable(),
     temperature: ko.observable(),
-    wind: ko.observable()
-  }
+    wind: ko.observable(),
+    degrees: ko.observable('C'),
+    toggleDegrees: function () {
+      this.degrees() === 'C' ?
+      calculateFahrenheit(this.temperature()) :
+      calculateCelsius(this.temperature())
+    }
+  };
+
+  function calculateFahrenheit(celsius) {
+    var fahrenheit = celsius * (9/5) + 32;
+    viewModel.degrees('F');
+    viewModel.temperature(fahrenheit.toFixed())    
+  };
+
+  function calculateCelsius(fahrenheit) {
+    var celsius = ((fahrenheit - 32) * 5)/9;
+    viewModel.degrees('C');
+    viewModel.temperature(celsius.toFixed())    
+  };
 
   function getGeolocation() {   
     if (navigator.geolocation) { 
