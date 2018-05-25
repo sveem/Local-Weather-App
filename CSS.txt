@@ -1,4 +1,0 @@
-1.Create a wrapper container for all elements
-2.Display-flex with columns
-3.Set flex-direction to column for temp & description
-4. Set justify-content - end (for columns)

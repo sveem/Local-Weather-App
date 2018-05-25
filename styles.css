@@ -21,18 +21,20 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 40px;
+  margin-bottom: 75px;
 }
 
 .temperature {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size:40px;
 }
 
 .city {
   border-radius: 10px;
-  border: 1px solid #73AD21;
+  border: 1px solid rgba(192,192,192,0.5);
+  background-color:rgba(192,192,192,0.5);
   padding: 20px;
   width: 200px;
   height: 80px;
@@ -43,7 +45,8 @@ body {
 
 .description {
   border-radius: 10px;
-  border: 1px solid #73AD21;
+  border: 1px solid rgba(192, 192, 192, 0.3);
+  background-color: rgba(192,192,192,0.3);
   padding: 20px;
   width: 160px;
   height: 80px;
@@ -55,7 +58,8 @@ body {
 
 .wind {
   border-radius: 10px;
-  border: 1px solid #73AD21;
+  border: 1px solid rgba(192, 192, 192, 0.3);
+  background-color: rgba(192,192,192,0.3);
   padding: 20px;
   width: 160px;
   height: 80px;
@@ -65,6 +69,10 @@ body {
   margin-left: 5px;
 }
 
+.degress {
+  color:blue;
+  cursor: pointer  
+}
 
 /*body {
   background-image: url("assets/sunny-day.jpg"); 

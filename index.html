@@ -12,47 +12,25 @@
   <script type='text/javascript' src='viewModel.js'></script>
 </head>
 <body>
- <div class="flex-container">
-   <div class="city">
-     <p data-bind="text: city()"></p>
-   </div>
-   <div class="inner-container">
-  <div class="temperature">
-    <p data-bind="text: temperature()"></p>
-    <p data-bind="text: degrees, click: toggleDegrees"></p>
+  <!-- ko if: city() -->
+  <div class="flex-container">
+    <div class="city">
+      <p data-bind="text: city()"></p>
+    </div>
+    <div class="inner-container">
+      <div class="temperature">
+        <p data-bind="text: temperature()"></p>
+        <p>°</p>
+        <p class="degress" data-bind="text: degrees, click: toggleDegrees"></p>
+      </div>
+      <div class="description">
+        <p data-bind="text: description()"></p>
+      </div>
+    </div>
+    <div class="wind">
+      <p data-bind="text: wind()"></p>
+    </div>
   </div>
-   <div class="description">
-     <p data-bind="text: description()"></p>
-   </div>
-   </div>
-   <div class="wind">
-     <p data-bind="text: wind()"></p>
-   </div>
- </div>
+  <!-- /ko -->
 </body>
 </html>
-
-<!--<body>
- <div class="flex-container">
-   <div class="city">
-     <p data-bind="text: city()"></p>
-   </div>
-  <div class="temperature">
-    <span data-bind="text: temperature()"></span>
-  </div>
-   <div class="description">
-     <p data-bind="text: description()"></p>
-   </div>
-   </div>
-   <div class="wind">
-     <p data-bind="text: wind()"></p>
-   </div>
- </div>
-</body>-->
-
-
-<!-- Ressources:
- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox#Flex_item_considerations
- https://demo.agektmr.com/flexbox/
- https://stackoverflow.com/questions/19026884/flexbox-center-horizontally-and-vertically
--->

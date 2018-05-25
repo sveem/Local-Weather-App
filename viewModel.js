@@ -12,6 +12,7 @@ $(function() {
     description: ko.observable(),
     temperature: ko.observable(),
     wind: ko.observable(),
+    icon: ko.observable(),
     degrees: ko.observable('C'),
     toggleDegrees: function () {
       this.degrees() === 'C' ?
@@ -50,13 +51,13 @@ $(function() {
         viewModel.country(data.sys.country);
         viewModel.description(data.weather[0].description);
         viewModel.temperature(data.main.temp);
-        viewModel.wind(data.wind.speed);
+        viewModel.wind(data.wind.speed + ' knots');
+        viewModel.icon(data.weather[0].icon);
       })
     });
   
     getGeolocation();
 
-// Pass the viewModel as param
 ko.applyBindings(viewModel)
 
 });
