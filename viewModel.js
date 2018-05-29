@@ -22,10 +22,14 @@ $(function() {
     image: ko.observable("/assets/sunny-day.jpg"),
   };
 
-  var weatherConditions = {
-    'sunny day': '/assets/sunny-day.jpg',
-    'broken clouds': '/assets/broken-clouds.jpg' 
-  }
+   function weatherConditions(id) {
+     var backgroundImage;
+       if (id < 531 ) { backgroundImage = '/assets/light-rain.jpg'}
+       if (id > 531 && id <= 622) { backgroundImage = '/assets/snow.jpg'} 
+       if (id === 800 ) { backgroundImage = '/assets/clear-sky.jpg'} 
+       if (id > 800 ) { backgroundImage = '/assets/broken-clouds.jpg'}  
+     return backgroundImage; 
+   }
 
   function calculateFahrenheit(celsius) {
     var fahrenheit = celsius * (9/5) + 32;
@@ -49,9 +53,6 @@ $(function() {
     } 
   }
 
-   changeBackgroundImage = function(description) {
-     if (description === 'broken clouds') {viewModel.image = '/assets/broken-clouds.jpg'}  
-   }
 
   var callWeatherAPI = ko.pureComputed(function() {
     var url = 'https://fcc-weather-api.glitch.me/api/current?lon=' + viewModel.geoLocation.longitude + '&lat=' + viewModel.geoLocation.latitude;         
@@ -60,9 +61,10 @@ $(function() {
         viewModel.city(data.name);
         viewModel.country(data.sys.country);
         viewModel.description(data.weather[0].description);
-        viewModel.temperature(data.main.temp);
+        viewModel.temperature((data.main.temp).toFixed());
         viewModel.wind(data.wind.speed + ' knots');
         viewModel.icon(data.weather[0].icon);
+        viewModel.image(weatherConditions(data.weather[0].id));
       })
 
     });
