@@ -11,8 +11,8 @@
   <script type='text/javascript' src='bower_components/jquery/dist/jquery.js'></script>
   <script type='text/javascript' src='viewModel.js'></script>
 </head>
-<body>
-  <!-- ko if: city() -->
+<body data-bind="style: {backgroundImage: 'url(\'' + image() + '\')'}">
+  <!-- ako if: city() -->
   <div class="flex-container">
     <div class="city">
       <p data-bind="text: city()"></p>
