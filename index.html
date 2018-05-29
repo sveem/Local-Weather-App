@@ -16,21 +16,21 @@
   <!-- ako if: city() -->
   <div class="flex-container">
     <div class="city">
-      <p data-bind="text: city()"></p>
+      <div data-bind="text: location()"></div>
     </div>
     <div class="inner-container">
       <div class="temperature">
         <img class="icon" data-bind="attr: {src: icon()}">
-        <p data-bind="text: temperature()"></p>
-        <p>°</p>
-        <p class="degress" data-bind="text: degrees, click: toggleDegrees"></p>
+        <div data-bind="text: temperature()"></div>
+        <div>°</div>
+        <div class="degress" data-bind="text: degrees, click: toggleDegrees"></div>
       </div>
       <div class="description">
-        <p data-bind="text: description()"></p>
+        <div data-bind="text: description()"></div>
       </div>
     </div>
     <div class="wind">
-      <p data-bind="text: wind()"></p>
+      <div data-bind="text: wind()"></div>
     </div>
   </div>
   <!-- /ko -->
