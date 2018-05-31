@@ -65,10 +65,7 @@ $(function () {
 
   var callWeatherAPI = ko.pureComputed(function () {
     var url = 'https://fcc-weather-api.glitch.me/api/current?lon=' + viewModel.geoLocation.longitude + '&lat=' + viewModel.geoLocation.latitude;
-    // viewModel.spinner(true);
     $.get(url, function (data) {
-      console.log('Response', data);
-      viewModel.spinner(false);
       viewModel.city(data.name);
       viewModel.country(data.sys.country);
       viewModel.location(viewModel.city() + ', ' + viewModel.country());

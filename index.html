@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" class="">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:500|Sunflower:300" rel="stylesheet">
   <script type='text/javascript' src='bower_components/knockout/dist/knockout.js'></script>
   <script type='text/javascript' src='bower_components/jquery/dist/jquery.js'></script>
   <script type='text/javascript' src='viewModel.js'></script>
 </head>
+
 <body data-bind="style: {backgroundImage: 'url(\'' + image() + '\')'}">
-    <!--<div class="spinner" data-bind="visible: spinner()">-->
-      <!--<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-    </div>-->
-  <div class="title"> 
-    <h1>Local Weather App</h1>  
+  <div class="title">
+    <h1>Local Weather App</h1>
+  </div>
+  <div class="spinner" data-bind="visible: spinner()">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
   <div class="flex-container">
-  <!--ko if: visible()-->
+    <!--ko if: visible()-->
     <div class="location">
       <div class="weather-location" data-bind="text: location()"></div>
     </div>
@@ -38,7 +45,8 @@
     <div class="wind">
       <div class="weather-wind" data-bind="text: wind()"></div>
     </div>
-  <!--/ko-->
+    <!--/ko-->
   </div>
 </body>
+
 </html>
