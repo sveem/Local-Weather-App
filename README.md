@@ -3,7 +3,7 @@
 ## Description: 
 Local weather app which shows the weather for current location.
 
-!['local weather'](/assets/logo.jpg)
+!['local weather'](/assets/logo-rain.jpg)
 
 
 ## Built With
