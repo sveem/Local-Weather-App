@@ -16,10 +16,11 @@ Install npm & bower dependencies:
 ```
 npm install http-server & npm install bower
 ```
+```
 bower install knockout & bower install jquery
 ```
 Run the app 
 ```
 http-server -p 8080
-
+```
 Visit localhost:8080
