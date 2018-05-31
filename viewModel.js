@@ -19,7 +19,9 @@ $(function () {
         calculateFahrenheit(this.temperature()) :
         calculateCelsius(this.temperature())
     },
-    image: ko.observable("/assets/sunny-day.jpg"),
+    image: ko.observable('/assets/sunny-day.jpg'),
+    visible: ko.observable(false),
+    spinner: ko.observable(true)
   };
 
   function weatherConditions(id) {
@@ -63,8 +65,10 @@ $(function () {
 
   var callWeatherAPI = ko.pureComputed(function () {
     var url = 'https://fcc-weather-api.glitch.me/api/current?lon=' + viewModel.geoLocation.longitude + '&lat=' + viewModel.geoLocation.latitude;
+    // viewModel.spinner(true);
     $.get(url, function (data) {
-      console.log('Response', data);;
+      console.log('Response', data);
+      viewModel.spinner(false);
       viewModel.city(data.name);
       viewModel.country(data.sys.country);
       viewModel.location(viewModel.city() + ', ' + viewModel.country());
@@ -73,6 +77,8 @@ $(function () {
       viewModel.wind(data.wind.speed + ' knots');
       viewModel.icon(data.weather[0].icon);
       viewModel.image(weatherConditions(data.weather[0].id));
+      viewModel.spinner(false);
+      viewModel.visible(true);
     })
   });
 

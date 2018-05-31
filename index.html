@@ -13,10 +13,16 @@
   <script type='text/javascript' src='viewModel.js'></script>
 </head>
 <body data-bind="style: {backgroundImage: 'url(\'' + image() + '\')'}">
-  <!-- ako if: city() -->
+    <!--<div class="spinner" data-bind="visible: spinner()">-->
+      <!--<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    </div>-->
+  <div class="title"> 
+    <h1>Local Weather App</h1>  
+  </div>
   <div class="flex-container">
-    <div class="city">
-      <div data-bind="text: location()"></div>
+  <!--ko if: visible()-->
+    <div class="location">
+      <div class="weather-location" data-bind="text: location()"></div>
     </div>
     <div class="inner-container">
       <div class="temperature">
@@ -26,13 +32,13 @@
         <div class="degress" data-bind="text: degrees, click: toggleDegrees"></div>
       </div>
       <div class="description">
-        <div data-bind="text: description()"></div>
+        <div class="weather-description" data-bind="text: description()"></div>
       </div>
     </div>
     <div class="wind">
-      <div data-bind="text: wind()"></div>
+      <div class="weather-wind" data-bind="text: wind()"></div>
     </div>
+  <!--/ko-->
   </div>
-  <!-- /ko -->
 </body>
 </html>
